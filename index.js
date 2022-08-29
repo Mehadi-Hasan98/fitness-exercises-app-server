@@ -22,7 +22,7 @@ async function run(){
         await client.connect();
         const itemCollection = client.db('ironFit').collection('item');
 
-
+        // GET API
         app.get('/item', async(req, res) => {
             const query = {};
             const cursor = itemCollection.find(query);
